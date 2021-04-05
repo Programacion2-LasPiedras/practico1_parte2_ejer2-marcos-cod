@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Programa {
 	
@@ -17,23 +17,31 @@ public class Programa {
 		System.out.println("Felicitaciones acertaste!!");
 	}
 	
-	//devuelve un numero aleatorio entre 1 y 100
-	int generarAleatorio(){
-		//completar aquí
+	public int generarAleatorio(){
+	int entero = Math.floor(Math.random()*99 + 1);
+	return entero;
+}
+
+// Donde A sea el generado y el B el del usuario
+public string compararNumero(int a, int b){
+	comparacion = a - b;
+	if (comparacion != 0){
+		resultado = "Has adivinado";
+		return resultado;
+	}else{
+		resultado = "No has adivinado";
+		return resultado;
 	}
-	
-	//pide un nro por pantalla
-	 int pedirNumero(){
-		 Scanner entrada=new Scanner(System.in);
-		 
-		////completar aquí
-		 
-	 }
-	
-	 //compara dos enteros a y b. Devuelve un String indicando si es menor, mayor o igual
-	 int compararNumeros(int a, int b){
-		 //completar aquí
-	 }
+}
+
+Scanner teclado=new Scanner(System.in);
+int aleatorio = generarAleatorio();
+System.out.println("ingrese un numero");
+int input = teclado.nextInt();
+
+
+String resultado = compararNumero(aleatorio, input);
+system.out.println(resultado);
 	
 }
 
